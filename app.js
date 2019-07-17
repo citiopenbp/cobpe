@@ -67,8 +67,8 @@ process.on('unhandledRejection', error => {
 });
 
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://chuck:tangabutts@ds261917.mlab.com:61917/cobpe", {useMongoClient: true});
-// mongoose.connect("mongodb://localhost/cobpe", {useMongoClient: true});
+mongoose.connect("mongodb://chuck:tangabutts@ds261917.mlab.com:61917/cobpe");
+// mongoose.connect("mongodb://localhost/cobpe");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
